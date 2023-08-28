@@ -1,0 +1,298 @@
+:root {
+    --dark: #0468d7;
+    --darker: #042b59;
+    --darkest: #041e3c;
+    --grey: #4b99ad;
+    --pink: #420233;
+    --purple: #edbef9;
+    --light: #b8eafe;
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Fira sans", sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: #FFF;
+    background-color: var(--light);
+}
+
+header {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    color: var(--grey);
+    margin-bottom: 1rem;
+}
+
+.phone-main {
+    padding: 15px;
+}
+
+.phone {
+    border: 1px solid #000;
+    border-radius: 2rem;
+    width: auto;
+    height: auto;
+}
+
+#new-task-form {
+    display: flex;
+    ;
+}
+
+input,
+button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#new-task-input {
+    flex: 1 1 0%;
+    background-color: var(--darker);
+    padding: 1rem;
+    border-radius: 3rem;
+    margin-right: 1rem;
+    color: var(--light);
+    font-size: 1.5rem;
+}
+
+#new-task-input::placeholder {
+    color: var(--grey);
+}
+
+#new-task-submit {
+    color: var(--pink);
+    font-size: 1.25rem;
+    font-weight: 700;
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#new-task-submit:hover {
+    opacity: 0.6;
+}
+
+#new-task-submit:active {
+    opacity: 0.6;
+}
+
+main {
+    flex: 1 1 0%;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list {
+    padding: 1rem;
+}
+
+.task-list h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--grey);
+    margin-bottom: 1rem;
+}
+
+#tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 3rem;
+    margin-bottom: 1rem;
+}
+
+.task .content {
+    flex: 1 1 0%;
+    color: var(--light);
+    font-size: 1.3rem;
+}
+
+.task .content .text {
+    color: var(--light);
+    font-size: 1.125rem;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+.task .content .text:not(:read-only) {
+    color: #FFF;
+}
+
+.task .actions {
+    display: flex;
+    margin: 0 -0.5rem;
+}
+
+.task .actions button {
+    cursor: pointer;
+    margin: 0 0.5rem;
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.task .actions button:hover {
+    opacity: 0.8;
+}
+
+.task .actions button:active {
+    opacity: 0.6;
+}
+
+.task .actions .edit {
+    background-image: linear-gradient(to right, var(--pink), var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.task .actions .delete {
+    color: crimson;
+}
+
+@media only screen and (max-width: 425px) {
+    .phone-main {
+        padding: 15px;
+    }
+
+    .phone {
+        border: 1px solid #000;
+        border-radius: 2rem;
+        width: auto;
+        height: auto;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: var(--grey);
+        margin-bottom: 1rem;
+    }
+
+    #new-task-form {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    #new-task-input {
+        padding: 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    input#new-task-submit {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header {
+        padding: 1rem 1rem;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .task-list h2 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: var(--grey);
+        margin-bottom: 0.5rem;
+    }
+
+    .task-list {
+        padding: 1rem;
+    }
+
+    .task .content {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .phone-main {
+        padding: 15px;
+    }
+
+    .task .content {
+        font-size: 1rem;
+    }
+
+    .phone {
+        border: 1px solid #000;
+        border-radius: 2rem;
+        width: auto;
+        height: auto;
+    }
+
+    header h1 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: var(--grey);
+        margin-bottom: 1rem;
+    }
+
+    #new-task-form {
+        display: flex;
+        gap: 1rem;
+        flex-direction: column;
+    }
+
+    #new-task-input {
+        padding: 0.9rem;
+        font-size: 0.9rem;
+    }
+
+    input#new-task-submit {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    header {
+        padding: 1rem 1rem;
+        width: 95%;
+        margin: 0 auto;
+    }
+
+    .task-list h2 {
+        font-size: 1.5rem;
+        font-weight: 300;
+        color: var(--grey);
+        margin-bottom: 0.5rem;
+    }
+
+    .task-list {
+        padding: 1rem;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .phone-main {
+        padding: 15px;
+    }
+
+    .phone {
+        border: 1px solid #000;
+        border-radius: 2rem;
+        width: auto;
+        height: auto;
+    }
+}
